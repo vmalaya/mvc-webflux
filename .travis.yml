@@ -1,0 +1,34 @@
+notifications:
+  email: false
+git:
+  depth: 2
+  quiet: true
+language: java
+jdk: openjdk8
+rvm: 2.6.4
+before_install:
+  - chmod +x mvnw
+install: true
+stages:
+  - test
+  - deploy
+#services:
+#  - docker
+jobs:
+  include:
+
+    - stage: test
+      jdk: openjdk8
+      name: run mvc test
+      script: ./mvnw clean package -pl :mvc
+
+    - stage: test
+      jdk: openjdk8
+      name: run webflux test
+      script: ./mvnw clean package -pl :webflux
+
+cache:
+  packages: true
+  directories:
+    - ~/.docker
+    - ~/.m2
