@@ -1,0 +1,17 @@
+spring:
+  flyway:
+    enabled: false
+  profiles:
+    include:
+      - db
+  application:
+    name: app
+  batch:
+    initialize-schema: always
+  output:
+    ansi:
+      enabled: always
+logging:
+  level:
+    org.springframework.transaction: 'TRACE'
+    org.springframework.data.r2dbc.connectionfactory: 'DEBUG'

@@ -1,0 +1,10 @@
+com\UserHandler.class
+com\user\User.class
+com\Application.class
+META-INF\spring-configuration-metadata.json
+com\r2dbc\DatabaseProperties.class
+com\r2dbc\R2DBCConfiguration.class
+com\UserWebClient.class
+com\Router.class
+com\r2dbc\DatabaseProperties$Server.class
+com\user\UserRepository.class
