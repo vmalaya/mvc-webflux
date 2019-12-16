@@ -1,4 +1,4 @@
-package com.example.test.r2dbc;
+package com.example.r2dbc;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

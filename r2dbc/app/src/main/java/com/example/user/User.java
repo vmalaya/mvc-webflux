@@ -1,4 +1,4 @@
-package com.example.test.user;
+package com.example.user;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

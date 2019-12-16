@@ -31,7 +31,7 @@ jobs:
       jdk: openjdk8
       name: run r2dbc test
       before_script:
-        - ./mvnw -f r2dbc
+        - ./mvnw -f r2dbc/app
         - ./mvnw -f r2dbc/postgres/pom.xml docker-compose:up
         - ./mvnw -f r2dbc/app process-resources flyway:migrate
       script: ./mvnw -f r2dbc/app -Ptest

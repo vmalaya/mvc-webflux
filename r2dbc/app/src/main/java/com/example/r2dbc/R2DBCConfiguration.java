@@ -1,4 +1,4 @@
-package com.example.test.r2dbc;
+package com.example.r2dbc;
 
 import io.r2dbc.postgresql.PostgresqlConnectionConfiguration;
 import io.r2dbc.postgresql.PostgresqlConnectionFactory;

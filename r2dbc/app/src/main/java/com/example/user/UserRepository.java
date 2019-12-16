@@ -1,4 +1,4 @@
-package com.example.test.user;
+package com.example.user;
 
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 

@@ -1,6 +1,6 @@
 build application
 ```cmd
-mvnw -f r2dbc
+mvnw -f r2dbc/app
 ```
 up database
 ```cmd
