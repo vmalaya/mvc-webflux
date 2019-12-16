@@ -27,6 +27,16 @@ jobs:
       name: run webflux test
       script: ./mvnw clean package -pl :webflux
 
+    - stage: test
+      jdk: openjdk8
+      name: run r2dbc test
+      before_script:
+        - ./mvnw -f r2dbc
+        - ./mvnw -f r2dbc/postgres/pom.xml docker-compose:up
+        - ./mvnw -f r2dbc/app process-resources flyway:migrate
+      script: ./mvnw -f r2dbc/app -Ptest
+      after_script: ./mvnw -f r2dbc/postgres/pom.xml docker-compose:down
+
 cache:
   packages: true
   directories:

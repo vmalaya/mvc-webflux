@@ -1,6 +1,6 @@
 build application
 ```cmd
-mvnw -pl r2dbc/app
+mvnw -f r2dbc
 ```
 up database
 ```cmd
@@ -8,11 +8,15 @@ mvnw -f r2dbc/postgres/pom.xml docker-compose:up
 ```
 migration
 ```cmd
-mvnw -pl r2dbc/app process-resources flyway:migrate
+mvnw -f r2dbc/app process-resources flyway:migrate
 ```
 run application
 ```cmd
-java -jar r2dbc/app/target/app.jar
+java -jar r2dbc/app/target/app-0.0.1-SNAPSHOT.jar
+```
+run tests
+```cmd
+mvnw -f r2dbc/app -Ptest
 ```
 down database
 ```cmd

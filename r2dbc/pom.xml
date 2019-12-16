@@ -11,19 +11,11 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>r2dbc</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>app</module>
         <module>postgres</module>
+        <module>app</module>
     </modules>
-
     <build>
         <defaultGoal>clean package</defaultGoal>
     </build>
-    <properties>
-        <spring-boot-starter-data-r2dbc.version>0.1.0.BUILD-SNAPSHOT</spring-boot-starter-data-r2dbc.version>
-        <r2dbc.version>0.8.0.RELEASE</r2dbc.version>
-        <flyway-core.version>6.0.3</flyway-core.version>
-        <postgresql.version>42.2.8</postgresql.version>
-    </properties>
 </project>
